@@ -1,0 +1,322 @@
+{
+  "from": 13,
+  "to": 18,
+  "month" : "Marzo",
+  "hours": [
+    {
+      "position": "07:00-08:00",
+
+      "events": [
+        {
+          "day": "17",
+          "hour" : "07:00-08:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(14 165 233)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "13",
+          "hour" : "07:00-08:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(14 165 233)"
+          },
+          "classroom": "aula1"
+        }
+        
+      ]
+    },{
+      "position": "08:00-09:00",
+
+      "events": [
+        {
+          "day": "16",
+          "hour" : "08:00-09:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(239 68 68)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "14",
+          "hour" : "08:00-09:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "rgb(239 68 68) Cat",
+            "color": "rgb(239 68 68)"
+          },
+          "classroom": "aula1"
+        }
+        
+      ]
+    },
+    {
+      "position": "09:00-10:00",
+
+      "events": [
+        {
+          "day": "17",
+          "hour" : "09:00-10:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(14 165 233)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "13",
+          "hour" : "09:00-10:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(99 102 241)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "14",
+          "hour" : "09:00-10:00",
+          "subject": "Matematicaaa Discreta",
+          "teacher": {
+            "name": "Raul Pachacama",
+            "color": "rgb(14 165 233)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "15",
+          "hour" : "09:00-10:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(99 102 241)"
+          },
+          "classroom": "aula1"
+        }
+        
+      ]
+    },{
+      "position": "10:00-11:00",
+
+      "events": [
+        {
+          "day": "16",
+          "hour" : "10:00-11:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(239 68 68)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "14",
+          "hour" : "10:00-11:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "rgb(239 68 68) Cat",
+            "color": "rgb(99 102 241)"
+          },
+          "classroom": "aula1"
+        }
+        
+      ]
+    },
+    {
+      "position": "11:00-12:00",
+
+      "events": [
+        {
+          "day": "17",
+          "hour" : "11:00-12:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(99 102 241)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "13",
+          "hour" : "11:00-12:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(14 165 233)"
+          },
+          "classroom": "aula1"
+        }
+        
+      ]
+    },{
+      "position": "12:00-13:00",
+
+      "events": [
+        {
+          "day": "16",
+          "hour" : "12:00-13:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(239 68 68)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "13",
+          "hour" : "12:00-13:00",
+          "subject": "Diseno web",
+          "teacher": {
+            "name": "Anderson Macias",
+            "color": "rgb(239 68 68)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "14",
+          "hour" : "12:00-13:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "rgb(239 68 68) Cat",
+            "color": "rgb(239 68 68)"
+          },
+          "classroom": "aula1"
+        }
+        
+      ]
+    },
+    {
+      "position": "13:00-14:00",
+
+      "events": [
+        {
+          "day": "17",
+          "hour" : "13:00-14:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(99 102 241)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "13",
+          "hour" : "13:00-14:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(14 165 233)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "16",
+          "hour" : "13:00-14:00",
+          "subject": "Programacion Visual",
+          "teacher": {
+            "name": "Freddy Heredia",
+            "color": "rgb(14 165 233)"
+          },
+          "classroom": "aula1"
+        }
+        
+      ]
+    },{
+      "position": "14:00-15:00",
+
+      "events": [
+        {
+          "day": "16",
+          "hour" : "14:00-15:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(239 68 68)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "14",
+          "hour" : "14:00-15:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "rgb(239 68 68) Cat",
+            "color": "rgb(239 68 68)"
+          },
+          "classroom": "aula1"
+        }
+        
+      ]
+    },
+    {
+      "position": "15:00-16:00",
+
+      "events": [
+        {
+          "day": "17",
+          "hour" : "15:00-16:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(14 165 233)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "13",
+          "hour" : "15:00-16:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(244 63 94)"
+          },
+          "classroom": "aula1"
+        }
+        
+      ]
+    },{
+      "position": "16:00-17:00",
+
+      "events": [
+        {
+          "day": "16",
+          "hour" : "16:00-17:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "Patricio Pachacama",
+            "color": "rgb(244 63 94)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "14",
+          "hour" : "16:00-17:00",
+          "subject": "Matematica Discreta",
+          "teacher": {
+            "name": "rgb(239 68 68) Cat",
+            "color": "rgb(244 63 94)"
+          },
+          "classroom": "aula1"
+        },
+        {
+          "day": "13",
+          "hour" : "16:00-17:00",
+          "subject": "Tendencias en el desarrollo de Software",
+          "teacher": {
+            "name": "Paul Navas",
+            "color": "rgb(14 165 233)"
+          },
+          "classroom": "aula1"
+        }
+      ]
+    }
+    
+  ]
+}

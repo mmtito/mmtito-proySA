@@ -1,0 +1,36 @@
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="pick-frecuency-event" class="modal-toggle" />
+<label for="pick-frecuency-event" class="modal cursor-pointer min-h-screen">
+  <label class="modal-box relative w-96 p-7" for="">
+    <div class="flex flex-col gap-y-7 ">
+      <p class="text-xl font-medium">Agregar concurrencia</p>
+
+      <div class="flex flex-col">
+       <!-- <label class="text-base font-medium"
+          >Repetir veces
+          <input
+            class="w-14 p-1 py-2 focus:outline-none rounded-sm text-center font-light bg-slate-200"
+            type="number"
+          />
+
+          <span> semanas</span>
+        </label>
+        -->
+        <p>Elija el rango</p>
+        <app-date-picker (changeDate)="setStartAndEndDate($event)" ></app-date-picker>
+      </div>
+      <div class="flex text-base flex-col flex-wrap">
+        <p class="font-medium">Repetir en</p>
+        <div class="flex flex-wrap gap-2">
+          <span (click)="handlerClickElement(i)" *ngFor="let day of rangeOptEvent.days;let i=index" value="" 
+          [ngClass]="day.select ? 'day-rounded day-rounded-select' : 'day-rounded'"
+          ><p>{{day.initial}}</p></span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-end gap-1 mt-5 justify-end">
+        <label class="text-blue-500 my-btn" for="pick-frecuency-event">Aceptar!</label>
+        <label (click)="handlerCancel()" class="my-btn" for="pick-frecuency-event">Cancelar</label>
+      </div>
+    </div>
+  </label></label
+>

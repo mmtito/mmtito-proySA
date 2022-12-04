@@ -1,0 +1,13 @@
+<select
+  #locationSelect
+  (change)="changeLocation(locationSelect.value)"
+  class="select bg-gray-300 rounded-none w-full select-sm max-w-xs"
+ 
+>
+  <option value="null" disabled selected>Ubicacion</option>
+  <option *ngFor="let location of locations" [value]="location.id"
+  [selected]="locationId === location.id"
+  >
+    {{ location.name }}
+  </option>
+</select>

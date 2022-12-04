@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  pg_utility:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: distributivodb
+      POSTGRES_PASSWORD_FILE: /run/secrets/distributivo_postgres
+      TZ: America/Guayaquil
+    volumes:
+      - distributivo_pgdata:/var/lib/postgresql/data
+    secrets:
+      - distributivo_postgres
+
+volumes:
+  distributivo_pgdata:
+    external: true
+
+secrets:
+  distributivo_postgres:
+    external: true

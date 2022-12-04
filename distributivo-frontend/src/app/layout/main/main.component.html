@@ -1,0 +1,13 @@
+<div class="drawer drawer-mobile mx-auto max-h-[1000px]  max-w-[1500px]">
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content min-h-screen flex flex-col rounded shadow-lg shadow-black mb-2 bg-white">
+    <div class="mx-auto w-full">
+      <app-header></app-header>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="drawer-side ">
+    <label for="my-drawer-2" class="drawer-overlay"></label>
+    <app-sidebar></app-sidebar>
+  </div>
+</div>

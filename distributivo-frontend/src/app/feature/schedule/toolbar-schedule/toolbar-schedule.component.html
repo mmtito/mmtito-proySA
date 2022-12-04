@@ -1,0 +1,37 @@
+<div class="flex p-2 gap-2 justify-between h-fit flex-wrap" >
+    <div class="gap-2 flex flex-wrap" >
+    <app-classroom-combobox (classroomSelectEvent)="onChangeClassroom($event)" ></app-classroom-combobox>
+    <app-teacher-combobox [myClass]="'p-2 text-gray-600 outline-none border-none active:outline-none focus:outline-none'"  (emittierTeacher)="onChangeTeacher($event)" ></app-teacher-combobox>
+    <app-grade-combobox [myClass]="'p-2 text-gray-600 outline-none border-none active:outline-none focus:outline-none'" (changeGradeEmittier)="onChangeGrade($event)" ></app-grade-combobox>
+    <div>
+    <select class="p-2 text-gray-600 outline-none border-none active:outline-none focus:outline-none" name="" id="">
+        <option value="">LECTIVO</option>
+        <option value="">Curso1</option>
+        <option value="">Curso2</option>
+        <option value="">Curso3</option>
+    </select>
+</div>
+</div>
+<div class="gap-2 flex flex-wrap" >
+   <label class="buttonface text-center hover:bg-gray-200 p-2 text-gray-600 rounded cursor-pointer ">SOLICITUDES</label>
+   <label class="buttonface text-center hover:bg-gray-200 p-2 text-gray-600 rounded cursor-pointer">IMPRIMIR</label>
+   <label class="buttonface text-center hover:bg-gray-200 p-2 text-gray-600 rounded cursor-pointer" for="import-excel">EXPORTAR</label>
+   
+</div>
+</div>
+<div class="flex text-xl px-4 flex-wrap justify-between " >
+    <div class="flex justify-between w-64" >
+        <div (click)="handlerClickRedoWeek()" class="h-fit cursor-pointer" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+            <path d="M10 12.796V3.2 04L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+          </svg>
+        </div>
+        <p class="text-xl" >{{ dateForCLient }}</p>
+        <div (click)="handlerClickNextWeek()" class="h-fit cursor-pointer" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+            <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+          </svg>
+        </div>
+    </div>
+</div>
+<app-upload-modal-Schedule></app-upload-modal-Schedule>

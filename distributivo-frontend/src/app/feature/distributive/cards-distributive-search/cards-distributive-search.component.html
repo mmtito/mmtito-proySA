@@ -1,0 +1,64 @@
+<!-- List distributive -->  
+ <!--search-->
+ <input
+ #dissearch
+ (keypress)="search(dissearch.value)"
+ class="focus:outline-none placeholder:text-base focus:border-b-2 text-xl mb-2 focus:border-cyan-500 border-b-2 p-1  w-full"
+ type="text"
+ placeholder="Escriba el nombre del docente para ver su distributivo"
+/>
+
+
+<!--list-->
+<div class="w-full h-52 flex gap-2 p-2 overflow-y-scroll invicible-scroll-ander justify-start flex-wrap">
+     <!--message no result-->
+     <div *ngIf="listDistributive.length == 0" class="w-full text-xl h-full flex flex-col items-center justify-center" >
+       <p>No se han encontrado resultados</p>
+       <p class="text-xs" >Aqui aparecen los resultados</p>
+    </div>
+    <!--cards-->
+   <div  *ngFor="let dis of listDistributive"  [ngStyle]="{ 'backgroundColor' : dis.color}" class="flex border text-white font-light action relative p-2 h-fit flex-col">
+   <p>{{dis.teacher}} {{dis.teacherApellido}}</p>
+   <p>{{dis.subject}}</p>
+   <p>{{dis.grade}}</p>
+   <div class="overlay bg-white">
+     <div class="flex text-slate-800 items-center border justify-center w-full h-full">
+       <button
+         *ngIf="dis.id != currentDisId;"
+         (click)="handlerSelect(dis.id)"
+         class=""
+       >
+         <svg
+           xmlns="http://www.w3.org/2000/svg"
+           width="40"
+           height="40"
+           fill="currentColor"
+           class="bi bi-file-earmark-plus-fill"
+           viewBox="0 0 16 16"
+         >
+           <path
+             d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM8.5 7v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 1 0z"
+           />
+         </svg>
+       </button>
+       <button *ngIf="dis.id == currentDisId;" class="">
+         <svg
+           xmlns="http://www.w3.org/2000/svg"
+           width="40"
+           height="40"
+           fill="currentColor"
+           class="bi bi-check2-circle"
+           viewBox="0 0 16 16"
+         >
+           <path
+             d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"
+           />
+           <path
+             d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"
+           />
+         </svg>
+       </button>
+     </div>
+   </div>
+ </div>
+</div>

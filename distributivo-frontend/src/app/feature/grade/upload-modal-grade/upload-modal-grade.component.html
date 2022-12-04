@@ -1,0 +1,18 @@
+<label for="import-excel-grade" class="btn btn-sm mr-1 btn-primary" >Importar</label>
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="import-excel-grade" class="modal-toggle" />
+<div class="modal">
+
+  <div class="modal-box w-96 justify-between flex-col flex-wrap flex">
+    <h1 class="border-b-2" >Importar Aulas</h1>
+    <div class="flex flex-col flex-wrap justify-center gap-2 items-center" >
+      <label (click)="downloadFile()" for="import-excel" class="btn w-full btn-sm mr-1 btn-primary" >Descargar Modelo</label>   
+<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="file_input">Importar desde excel</label>
+<input #locationExcel class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
+    </div>
+    <div class="flex justify-end " >
+    <label (click)="importGrades(locationExcel.files)" class="btn btn-xs" for="import-excel-grade" >Importar</label>
+    <label class="btn btn-xs" for="import-excel-grade" >Cerrar</label>
+  </div>
+   
+</div>

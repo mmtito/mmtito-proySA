@@ -1,0 +1,84 @@
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal-grade" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box w-96 flex-col flex items-center">
+    <h3 class="text-center w-full font-bold border-b-2 text-xl">
+      Nueva curso
+    </h3>
+
+    <div
+      class="flex justify-center items-center w-full gap-2 flex-col gap-y-4 flex-wrap"
+    >
+      <div class="flex w-full gap-2">
+        <div class="w-full">
+          <label class="block" for="">Nombre</label>
+          <input
+          #name="ngModel"
+          minlength="4"
+          [(ngModel)]="currentEntity.name"
+           
+            class="focus:outline-dashed w-full py-2 bg-gray-300"
+            type="text"
+          />
+          <div class="text-[9px] h-3 text-red-400">
+            <div *ngIf="name.errors?.['minlength']">
+              Debe tener mas de 4 caracteres
+            </div>
+          </div>
+        </div>
+        <div>
+          <label class="block" for="">Carrera</label>
+        <app-combobox-career [careerId]="currentEntity.career" (careerSelectEvent)="addCareer($event)" ></app-combobox-career>
+        </div>
+      </div>
+
+     <div class="flex gap-1 flex-row w-full justify-around flex-wrap" >
+        <div class="flex flex-col" >
+            <label for="">Nivel</label>
+            <select [(ngModel)]="currentEntity.level" class="select select-xs bg-gray-300 w-24 rounded-none" name="" id="">
+              <option value="1">PRIMERO</option>
+              <option value="2">SEGUNDO</option>
+              <option value="3">TERCERO</option>
+              <option value="4">CUARTO</option>
+              <option value="5">QUINTO</option>
+            </select>
+
+        </div>
+        <div class="flex flex-col" >
+            <label for="">Paralelo</label>
+            <select [(ngModel)]="currentEntity.parallel" class="select select-xs bg-gray-300 w-24 rounded-none" name="" id="">
+              <option value="6">A</option>
+              <option value="7">B</option>
+              <option value="8">C</option>
+              <option value="9">D</option>
+            </select>
+
+        </div>
+        <div class="flex flex-col" >
+            <label for="">Jornada</label>
+            <select [(ngModel)]="currentEntity.workingDay" class="select select-xs bg-gray-300 w-24 rounded-none" name="" id="">
+              <option value="10">Matutina</option>
+              <option value="11">Vespertina</option>
+              <option value="12">Nocturna</option>
+            </select>
+
+        </div>
+     </div>
+
+      <div class="modal-action m-0">
+        <label
+          (click)="saveOrUpdate()"
+          class="cursor-pointer btn btn-sm"
+          for="my-modal-grade"
+          >Aceptar</label
+        >
+        <label
+          (click)="removeCurrentEntity()"
+          class="cursor-pointer btn-sm btn"
+          for="my-modal-grade"
+          >Cancelar</label
+        >
+      </div>
+    </div>
+  </div>
+</div>

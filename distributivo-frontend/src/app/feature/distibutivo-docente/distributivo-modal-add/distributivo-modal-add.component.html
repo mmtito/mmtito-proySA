@@ -1,0 +1,32 @@
+<input type="checkbox" id="distributive-new" class="modal-toggle" />
+<label for="distributive-new" class="modal cursor-pointer">
+  <label class="modal-box relative w-7/12 max-w-screen-2xl rounded-md  text-[#283c4d]" for="">
+    <h1 class="text-center text-slate-500">Distributivo</h1>
+    <div class="flex justify-evenly mb-5 text-slate-600">
+      <app-grade-combobox
+        [myClass]="'select select-bordered focus:outline-none select-sm focus:border-sky-700 bg-indigo-100  max-w-xs w-36'"
+        (changeGradeEmittier)="handlerChangeGrade($event)"></app-grade-combobox>
+      <app-combobox-career
+        [myClass]="'select select-bordered focus:outline-none select-sm focus:border-sky-700 bg-indigo-100  max-w-xs w-36'"
+        (careerSelectEvent)="handlerChangeCareer($event)"></app-combobox-career>
+    </div>
+    <div class="flex justify-evenly mb-5 text-slate-600">
+      <app-teacher-combobox (emittierTeacher)="handlerChangeteacher($event)"
+        [myClass]="'select select-bordered focus:outline-none select-sm focus:border-sky-700 bg-indigo-100  max-w-xs  w-36'">
+      </app-teacher-combobox>
+      <app-combobox-school-period (periodSelectEvent)="handlerChangePeriodo($event)"
+        [myClass]="'select select-bordered focus:outline-none select-sm focus:border-sky-700 bg-indigo-100  max-w-xs w-36'">
+      </app-combobox-school-period>
+    </div>
+    <div class="flex justify-center mb-5 text-slate-600">
+      <app-combobox-cours (subjectSelectEvent)="handlerChangeCouse($event)"
+        [myClass]="'select select-bordered focus:outline-none select-sm focus:border-sky-700 bg-indigo-100  max-w-xs '">
+      </app-combobox-cours>
+    </div>
+    <div class="flex justify-center">
+      <label for="distributive-new"
+        class="btn btn-sm  btn-wide btn-ghost border-green-600 bg-green-600 text-xs text-white"
+        (click)="save()">enviar</label>
+    </div>
+  </label>
+</label>

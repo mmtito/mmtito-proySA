@@ -1,0 +1,21 @@
+<div class="flex justify-between text-[#283c4d] m-4">
+
+    <label class="text-base"><span class="text-primary">Periodo Lectivo:</span>
+        <select #selectSearchPeriod (input)="onInputPeriod(selectSearchPeriod.value)"
+            class="select w-auto max-w-xs select-sm bg-indigo-100">
+            <option selected *ngFor="let period of schoolPeriodList">
+                {{period.name}}
+            </option>
+            <option value="">MOSTRAR TODOS</option>
+        </select>
+    </label>
+
+    <select class="select w-auto max-w-xs select-sm bg-indigo-100" #selectSearchCareer
+        (input)="onInputCareer(selectSearchCareer.value)">
+        <option disabled selected>Carrera</option>
+        <option *ngFor="let career of careerList">
+            {{career.name}}
+        </option>
+        <option value="">MOSTRAR TODOS</option>
+    </select>
+</div>

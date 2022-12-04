@@ -1,0 +1,5 @@
+
+<select #selectTeacher (change)="handlerChangeTeacher(selectTeacher.value)" [ngClass]="myClass" name="" id="">
+    <option value="">Docente</option>
+    <option *ngFor="let teacher of teachers" [value]="teacher.id">{{teacher.name}}</option>
+</select>

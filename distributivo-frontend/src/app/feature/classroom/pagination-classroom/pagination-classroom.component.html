@@ -1,0 +1,13 @@
+<div class="btn-group flex justify-center">
+  <a
+    [routerLink]="['/layout/classroom']"
+    *ngFor="
+      let in of counter(classRoomService.listClassrooms.totalPages);
+      let i = index
+    "
+    class="btn btn-sm"
+    [queryParams]="{ page: i }"
+  >
+    {{ i }}
+  </a>
+</div>

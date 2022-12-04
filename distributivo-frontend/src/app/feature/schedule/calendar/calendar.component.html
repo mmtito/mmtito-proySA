@@ -1,0 +1,94 @@
+<table *ngIf="!loading || events.hours.length != 0" class="w-full border-l">
+  <thead class="bg-zinc-100">
+    <tr class="flex text-gray-600">
+      <th class="w-1-8 h-10 flex justify-center items-center border-b border-r">Hora</th>
+      <th class="w-1-8 border-b flex justify-center items-center border-r">Lunes</th>
+      <th class="w-1-8 border-b flex justify-center items-center border-r">Martes</th>
+      <th class="w-1-8 border-b flex justify-center items-center border-r">Miercoles</th>
+      <th class="w-1-8 border-b flex justify-center items-center border-r">Jueves</th>
+      <th class="w-1-8 border-b flex justify-center items-center border-r">Viernes</th>
+      <th class="border-b w-1-8 flex justify-center items-center border-r">Sabado</th>
+      <th class="w-1-8 border-b flex justify-center items-center border-r">Domingo</th>
+    </tr>
+    <tr class="flex bg-zinc-100 text-black ">
+      <td class="w-1-8 border-b flex justify-center items-center border-r"></td>
+      <td
+        *ngFor="let day of events.toFrom"
+        class="w-1-8 border-b flex justify-center items-center border-r"
+      >
+        {{ day.slice(8, 10) }}
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let hour of events.hours"
+      class="flex h-14 overflow-hidden text-gray-700 text-sm"
+    >
+      <td class="w-1-8 border-b border-r flex items-center justify-center">{{ hour.position }}</td>
+      <td
+        *ngFor="let day of events.toFrom"
+        class="w-1-8 border-b border-r p-0 text-center"
+      >
+        <app-item-calendar
+          (clickItemEmittier)="handleClickItem($event)"
+          [event]="giveEvent(day, hour)"
+        ></app-item-calendar>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<input type="checkbox" id="modal-view-event-calendar" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box w-96 h-60 scroll-ander invicible-scroll-ander leading-none relative">
+    <label
+    for="modal-view-event-calendar"
+    class="btn btn-sm btn-circle absolute right-2 top-2"
+    >✕</label
+  > 
+    <h3 class="text-lg font-bold border-b leading-none text-center">
+        {{ currentEntity.subject }}
+    </h3>
+ 
+    <div class="w-full flex  justify-between">
+      <div class="mr-6 font-bold">
+        <p>Aula:</p>
+        <p>Docente:</p>
+        <p>Curso:</p>
+        <p>Fecha: </p> <p>Hora: </p> 
+      </div>
+      <div class="w-full">
+        <p>{{ currentEntity.classroom }}</p>
+        <p>{{ currentEntity.teacher.name }}</p>
+        <p>{{ currentEntity.grade }}</p>
+        <p>{{ currentEntity.day }}</p>
+        <p>{{ currentEntity.hour }}</p>
+      </div>
+      <div class="flex justify-end items-end pb-2"> 
+        <label class="cursor-pointer" for="delete-location"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+          <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+        </svg>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="delete-location" class="modal-toggle" />
+<div class="modal left-96 bg-opacity-0">
+  <div class="modal-box text-sm rounded-md py-1 w-52 shadow-md border-t-2 h-fit">
+    <p class="font-bold text-gray-600 text-center m-0">Estas seguro de eliminar?</p>
+    <div class="modal-action flex flex-wrap justify-center m-0 ">
+      <label (click)="deleteEvent()" for="delete-location" class="btn text-xs btn-xs btn-primary">Aceptar</label>
+      <label for="delete-location" class="btn text-xs btn-xs btn-warning">Cancelar</label>
+    </div>
+  </div>
+</div>
+<app-modal-schedule></app-modal-schedule>
+
+<div *ngIf="loading && events.hours.length == 0" class="w-full h-[560px] flex  items-center justify-center" >
+  <mat-spinner></mat-spinner>
+  <div>

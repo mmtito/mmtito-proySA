@@ -1,0 +1,58 @@
+@tokeen=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTczMzUyODEwNywicm9sIjoiVVNVQVJJT19FTElNSU5BUiJ9.Z3k-6kMVJN2nl3cresHpQ8hIY27YGKuzCukbl83G0J7Ei2Xu71Fw_9wX4HWxYdhJnGIGP9RsnL3cSyJdvBE7Lg
+@type = application/json
+@url = http://localhost:8080/api/grade
+###
+GET {{url}}
+Authorization:{{tokeen}}
+
+###
+GET {{url}}/2
+Authorization:{{tokeen}}
+
+###
+GET {{url}}/find/lol
+Authorization:{{tokeen}}
+
+###
+POST {{url}}
+Authorization:{{tokeen}}
+Content-Type:{{type}}
+
+{
+  "name": "",
+  "workingDay": null,
+  "level": null,
+  "parallel": null,
+  "career": null,
+  "status": true
+}
+###
+POST {{url}}/update
+Authorization:{{tokeen}}
+Content-Type:{{type}}
+
+{
+  "id": 1,
+  "name": "",
+  "workingDay": 1,
+  "level": 3,
+  "parallel": null,
+  "career": null,
+  "status": true
+}
+
+###
+GET {{url}}/delete/1
+Authorization:{{tokeen}}
+
+###
+GET {{url}}/export-to-excel
+Authorization:{{tokeen}}
+
+###
+GET {{url}}/careers
+Authorization:{{tokeen}}
+
+###
+GET {{url}}/findAll
+Authorization:{{tokeen}}

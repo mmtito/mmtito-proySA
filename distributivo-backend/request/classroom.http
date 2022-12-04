@@ -1,0 +1,42 @@
+@tokeen=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTczNTcyMjM3Mywicm9sIjoiVVNVQVJJT19FTElNSU5BUiJ9.wc5wA6FmaiurLOThFGgQrQ_G0UCNJQFCSB2PZ9oEtW-LT-syCZbI-26alSA7Z4JNJX6NkqMK55VctUXehtyzNw
+@type = application/json
+@url = http://localhost:8080/api/classroom
+###
+GET {{url}}
+Authorization:{{tokeen}}
+
+###
+POST {{url}}
+Authorization:{{tokeen}}
+Content-Type:{{type}}
+
+{
+  
+   "name" : "",
+ 
+   "capacity" : null 
+}
+
+###
+PUT {{url}}
+Authorization:{{tokeen}}
+Content-Type:{{type}}
+
+{
+   "id" : 5, 
+   "name" : "change",
+   "location" : 3,
+   "capacity" : null 
+}
+
+###
+GET {{url}}/delete/4
+Authorization:{{tokeen}}
+
+###
+GET {{url}}/export-to-excel
+Authorization:{{tokeen}}
+
+###
+GET {{url}}/findAll
+Authorization:{{tokeen}}

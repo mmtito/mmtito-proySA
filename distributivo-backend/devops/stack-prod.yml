@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  distributivo-backend:
+    image: distributivo-backend:release-v1.0.1
+    environment:
+      - TZ=America/Guayaquil
+      - SPRING_PROFILES_ACTIVE=prod
+    networks:
+      - distributivo_net
+      - traefik-public
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 1024M      
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.distributivo-backend.entrypoints=http"
+        - "traefik.http.routers.distributivo-backend.rule=Host(`distributivo-backend.yavirac.edu.ec`)"
+        - "traefik.http.middlewares.distributivo-backend-https-redirect.redirectscheme.scheme=https"
+        - "traefik.http.routers.distributivo-backend.middlewares=distributivo-backend-https-redirect"
+        - "traefik.http.routers.distributivo-backend-secure.entrypoints=https"
+        - "traefik.http.routers.distributivo-backend-secure.rule=Host(`distributivo-backend.yavirac.edu.ec`)"
+        - "traefik.http.routers.distributivo-backend-secure.tls=true"
+        - "traefik.http.routers.distributivo-backend-secure.tls.certresolver=http"
+        - "traefik.http.routers.distributivo-backend-secure.service=distributivo-backend"
+        - "traefik.http.services.distributivo-backend.loadbalancer.server.port=8080"
+        - "traefik.docker.network=traefik-public"      
+  pg_distributivo:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/distributivo_postgres
+      TZ: America/Guayaquil
+    volumes:
+      - distributivo_pgdata:/var/lib/postgresql/data
+    networks:
+      - distributivo_net
+      - service_net
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 1024M
+    secrets:
+      - distributivo_postgres
+
+secrets:
+  distributivo_postgres:
+    external: true
+
+volumes:
+  distributivo_pgdata:
+    external: true
+
+networks:
+  service_net:
+    external: true
+  distributivo_net:
+    external: true

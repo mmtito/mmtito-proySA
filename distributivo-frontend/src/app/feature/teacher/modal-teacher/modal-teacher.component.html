@@ -1,0 +1,132 @@
+<label for="teacher-modal"
+  class="btn btn-sm btn-info bg-cyan-600 border-cyan-600 text-white text-xs rounded-sm modal-button">
+  <span class="hidden xl:inline">Crear</span>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+    y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"
+    class="w-5 h-5 xl:hidden fill-white">
+    <g>
+      <path
+        d="M480,224H288V32c0-17.673-14.327-32-32-32s-32,14.327-32,32v192H32c-17.673,0-32,14.327-32,32s14.327,32,32,32h192v192   c0,17.673,14.327,32,32,32s32-14.327,32-32V288h192c17.673,0,32-14.327,32-32S497.673,224,480,224z" />
+    </g>
+  </svg>
+</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="teacher-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box w-auto flex-col rounded-md flex items-center">
+    <div class="flex flex-col">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text text-blue-500">Cedula:</span>
+        </label>
+        <label class="input-group input-group-sm">
+          <input [(ngModel)]="currentEntity.dni" type="text" placeholder="10 numeros max"
+            class="input focus:outline-none input-sm focus:border-sky-700 py-2 bg-indigo-100" />
+          <span>
+            <svg id="Layer_1" class="w-5 h-5 fill-black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+              data-name="Layer 1">
+              <path
+                d="m19 4h-4v-1a3 3 0 0 0 -6 0v1h-4a5.006 5.006 0 0 0 -5 5v10a5.006 5.006 0 0 0 5 5h14a5.006 5.006 0 0 0 5-5v-10a5.006 5.006 0 0 0 -5-5zm-8-1a1 1 0 0 1 2 0v2a1 1 0 0 1 -2 0zm11 16a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3-3v-10a3 3 0 0 1 3-3h4.184a2.982 2.982 0 0 0 5.632 0h4.184a3 3 0 0 1 3 3zm-12-9h-5a1 1 0 0 0 -1 1v8a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-8a1 1 0 0 0 -1-1zm-1 8h-3v-6h3zm11-3a1 1 0 0 1 -1 1h-5a1 1 0 0 1 0-2h5a1 1 0 0 1 1 1zm0-4a1 1 0 0 1 -1 1h-5a1 1 0 0 1 0-2h5a1 1 0 0 1 1 1zm-2 8a1 1 0 0 1 -1 1h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1z" />
+            </svg>
+          </span>
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text text-blue-500">Docente:</span>
+        </label>
+        <label class="input-group input-group-sm">
+          <input [(ngModel)]="currentEntity.name" type="text" placeholder="Nombre valido"
+            class="input focus:outline-none input-sm focus:border-sky-700 py-2 bg-indigo-100" />
+          <span>
+            <svg class="w-5 h-5 fill-black" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+              style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <g>
+                <circle cx="256" cy="128" r="128" />
+                <path
+                  d="M256,298.667c-105.99,0.118-191.882,86.01-192,192C64,502.449,73.551,512,85.333,512h341.333   c11.782,0,21.333-9.551,21.333-21.333C447.882,384.677,361.99,298.784,256,298.667z" />
+              </g>
+            </svg>
+          </span>
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text text-blue-500">Apellido:</span>
+        </label>
+        <label class="input-group input-group-sm">
+          <input [(ngModel)]="currentEntity.lastname" type="text" placeholder="Nombre valido"
+            class="input focus:outline-none input-sm focus:border-sky-700 py-2 bg-indigo-100" />
+          <span>
+            <svg class="w-5 h-5 fill-black" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+              style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <g>
+                <circle cx="256" cy="128" r="128" />
+                <path
+                  d="M256,298.667c-105.99,0.118-191.882,86.01-192,192C64,502.449,73.551,512,85.333,512h341.333   c11.782,0,21.333-9.551,21.333-21.333C447.882,384.677,361.99,298.784,256,298.667z" />
+              </g>
+            </svg>
+          </span>
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text text-blue-500">Email:</span>
+        </label>
+        <label class="input-group input-group-sm">
+          <input [(ngModel)]="currentEntity.email" type="text" placeholder="ejemplo@yavirac.edu.ec"
+            class="input focus:outline-none input-sm focus:border-sky-700 py-2 bg-indigo-100" />
+          <span>
+            <svg class="w-5 h-5 fill-black" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+              viewBox="0 0 24 24">
+              <path
+                d="M12,0A12.013,12.013,0,0,0,0,12c-.126,9.573,11.159,15.429,18.9,9.817a1,1,0,1,0-1.152-1.634C11.3,24.856,1.9,19.978,2,12,2.549-1.266,21.453-1.263,22,12v2a2,2,0,0,1-4,0V12C17.748,4.071,6.251,4.072,6,12a6.017,6.017,0,0,0,10.52,3.933A4,4,0,0,0,24,14V12A12.013,12.013,0,0,0,12,0Zm0,16a4,4,0,0,1,0-8A4,4,0,0,1,12,16Z" />
+            </svg>
+          </span>
+        </label>
+      </div>
+      <div class="form-control"></div>
+      <label class="label">
+        <span class="label-text text-blue-500">Color:</span>
+      </label>
+      <label class="input-group input-group-sm">
+        <input [(ngModel)]="currentEntity.color" type="color" />
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 24 24" class="w-5 h-5" data-name="Layer 1">
+            <path
+              d="m22.327 18.422c.728 1.034 1.673 2.229 1.673 3.078a2.5 2.5 0 0 1 -5 0c0-.775.961-2.008 1.692-3.069a1 1 0 0 1 1.635-.009zm-.877-4.558-8.672 8.672a5.006 5.006 0 0 1 -7.071 0l-4.242-4.243a5 5 0 0 1 0-7.071l5.709-5.71-2.856-2.89a1 1 0 0 1 1.422-1.406l2.848 2.884 1.548-1.55-.843-.843a1 1 0 0 1 1.414-1.414l13 13a1 1 0 1 1 -1.414 1.414zm-1.414-1.414-8.486-8.486-1.557 1.558 4.718 4.778a1 1 0 1 1 -1.422 1.4l-4.709-4.765-5.7 5.7a3 3 0 0 0 0 4.243l4.242 4.243a3.005 3.005 0 0 0 4.243 0z" />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div class="form-control pb-4">
+      <label class="label">
+        <span class="label-text text-blue-500">Estado:</span>
+      </label>
+      <label class="">
+        <input type="checkbox" class="toggle toggle-sm" [(ngModel)]="currentEntity.archived" checked />
+      </label>
+    </div>
+    <div class="btn-group">
+      <label for="teacher-modal" (click)="save()"
+        class=" btn btn-sm btn-ghost  border-green-600 bg-green-600">Guardar</label>
+      <label for="teacher-modal" (click)="cancelar()" routerLink="/layout/teacher-list"
+        class="btn btn-sm btn-error">Cancelar</label>
+    </div>
+  </div>
+</div>
+<!-- 
+    <input type="checkbox" id="teacher-delete-modal" class="modal-toggle" />
+    <div class="modal left-96 bg-opacity-0">
+      <div class="modal-box text-sm rounded-md py-1 w-52 shadow-md border-t-2 h-fit">
+        <p class="font-bold text-gray-600 text-center m-0">Estas seguro de eliminar?</p>
+        <div class="modal-action flex flex-wrap justify-center m-0 ">
+          <label  for="teacher-delete-modal" class="btn text-xs btn-xs btn-primary">Aceptar</label>
+          <label  for="teacher-delete-modal" class="btn text-xs btn-xs btn-warning">Cancelar</label>
+        </div>
+      </div>
+    </div> 
+  -->

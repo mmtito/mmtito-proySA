@@ -1,0 +1,4 @@
+<select #period (click)="addPeriodEmitter(period.value)" [ngClass]="myClass" >
+    <option selected disabled>Periodo Lectivo</option>
+    <option [value]="period.id" *ngFor="let period of schoolPeriodList">{{period.name}}</option>
+</select>

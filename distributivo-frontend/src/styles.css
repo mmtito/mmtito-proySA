@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+ /* width */
+ .scroll-ander::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    border-radius: 20%;
+  }
+  .invicible-scroll-ander::-webkit-scrollbar {
+    width: 0px;
+    height:0px;
+    border-radius: 0%;
+  }
+  
+  /* Track */
+  .scroll-ander::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .scroll-ander::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .scroll-ander::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  .action:hover .overlay{
+    opacity: 1;
+
+    
+}
+
+.w-1-8 {
+  width: 12.5%;
+
+}
+
+.overlay{
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+
+}
+.adjust{
+  font-size-adjust:0.5;
+}
+.my-btn{
+  font-size: medium;
+  padding: 7px;
+  border-radius: 2%;
+  cursor: pointer;
+
+}
+.my-btn:hover{
+  
+  background-color: aliceblue;
+
+} 
+
+.buttonface {
+  background-color: buttonface;
+}

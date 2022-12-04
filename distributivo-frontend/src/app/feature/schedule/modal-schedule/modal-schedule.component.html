@@ -1,0 +1,26 @@
+<input type="checkbox" id="modal-event-calendar" class="modal-toggle" />
+<div class="modal">
+  <div
+class="modal-box max-w-[1000px] flex flex-col relative bg-white w-[720px] h-fit scroll-ander invicible-scroll-ander leading-none"
+>
+
+<label
+  for="modal-event-calendar"
+  class="btn text-white btn-sm btn-circle text-lg absolute right-2 top-2"
+  >✕</label
+>
+<br>
+<br>
+
+<app-cards-distributive-search (distributiveEmittier)="setOccupiedBy($event)"></app-cards-distributive-search>
+
+<div class="flex w-full pt-2 flex-wrap justify-between">
+  <app-classroom-combobox class="w-44" (classroomSelectEvent)="setClassroom($event)"></app-classroom-combobox>
+  <label class="btn" for="pick-frecuency-event">Anadir frecuencia</label>
+  </div>
+<br>
+<label for="modal-event-calendar" (click)="saveOrSaveRange()" class="btn btn-sm" >Save</label>
+</div>
+</div>
+
+<app-pick-repeat-event-modal (changerange)="setRange($event)" ></app-pick-repeat-event-modal>

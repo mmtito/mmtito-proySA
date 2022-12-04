@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  distributivo-backend:
+    image: distributivo-backend:release-v1.0.1
+    environment:
+      - TZ=America/Guayaquil
+      - SPRING_PROFILES_ACTIVE=local
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+        mode: host
+    networks:
+      - distributivo_net
+    deploy:
+      replicas: 1
+  pg_distributivo:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/distributivo_postgres
+      TZ: America/Guayaquil
+    volumes:
+      - distributivo_pgdata:/var/lib/postgresql/data
+    networks:
+      - distributivo_net
+      - service_net
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 1024M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    secrets:
+      - distributivo_postgres
+
+secrets:
+  distributivo_postgres:
+    external: true
+
+volumes:
+  distributivo_pgdata:
+    external: true
+
+networks:
+  service_net:
+    external: true
+  distributivo_net:
+    external: true

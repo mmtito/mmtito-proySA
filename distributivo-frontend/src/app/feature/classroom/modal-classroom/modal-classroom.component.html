@@ -1,0 +1,111 @@
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box w-96 flex-col flex items-center">
+    <h3 class="text-center w-full font-bold border-b-2 text-xl">
+      Nueva Aula
+    </h3>
+    <div class="flex flex-col w-full text-xs gap-x-4-2">
+      <div class="flex w-full gap-1 justify-between flex-row">
+        <div class="flex w-full flex-col">
+          <label for="">Nombre aula</label>
+          <input
+            name="name"
+            id="name"
+            #name="ngModel"
+            minlength="4"
+            required
+            [(ngModel)]="currentEntity.name"
+            class="focus:outline-dashed w-full py-2 bg-gray-300"
+            type="text"
+            placeholder="Type here"
+          />
+          <div class="text-[9px] h-3 text-red-400">
+            <div *ngIf="name.errors?.['minlength']">
+              Debe tener mas de 4 caracteres
+            </div>
+          </div>
+        </div>
+     
+        <div class="flex flex-col">
+          <label for="">Capacidad</label>
+          <input
+            minlength="10"
+            #cordenadas="ngModel"
+            required
+            [(ngModel)]="currentEntity.capacity"
+            class="py-2 focus:outline-dashed w-16 px-2 bg-gray-300"
+            type="number"
+            placeholder="Type here"
+          />
+          <div class="w-full" ></div>
+          <div class="text-[9px] h-3 text-red-400">
+            <div *ngIf="cordenadas.errors?.['minlength']">
+              Debe tener mas de 10 caracteres
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex w-full flex-col">
+      <label for="">Codigo aula</label>
+      <input
+        name="name"
+        id="name"
+        #name="ngModel"
+        minlength="2"
+        required
+        [(ngModel)]="currentEntity.code"
+        class="focus:outline-dashed w-full py-2 bg-gray-300"
+        type="text"
+        placeholder="Type here"
+      />
+      <div class="text-[9px] h-3 text-red-400">
+        <div *ngIf="name.errors?.['minlength']">
+          Debe tener mas de 2 caracteres
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-full text-xs gap-x-4-2">
+      <div class="flex w-full gap-1 justify-between flex-row">
+        <div class="flex flex-col">
+          <label for="">Location</label>
+         <app-location-combobox (locationEventEmittier)="addLocation($event)" ></app-location-combobox>
+        </div>
+        <div class="flex flex-col">
+          <label for="">Tipo</label>
+          <app-classroom-type-combobox (changeTypeEvent)="addLocation($event)" ></app-classroom-type-combobox>
+        </div>
+      
+      </div>
+    </div>
+    <div class="flex text-xs p-3 w-full flex-col">
+      <label for="">Description</label>
+      <textarea
+        required
+        name="description"
+        #description="ngModel"
+        [(ngModel)]="currentEntity.description"
+        rows="5"
+        class="textarea text-xs rounded-none bg-gray-300 resize-none leading-3 textarea-ghost"
+      >
+      </textarea>
+      <div class="text-[9px] h-3 text-red-400">
+        <div *ngIf="description.errors?.['required']">
+          Este campo es requerido
+        </div>
+      </div>
+    </div>
+    <div class="modal-action m-0">
+      <label (click)="saveOrUpdate()" class="cursor-pointer btn btn-sm" for="my-modal"
+        >Aceptar</label
+      >
+      <label
+        (click)="removeCurrentEntity()"
+        class="cursor-pointer btn-sm btn"
+        for="my-modal"
+        >Cancelar</label
+      >
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="flex text-gray-500 p-3 flex-wrap flex-col">
+  <div *ngFor="let career of this.gradeService.listGrades" >
+    <h1 class="text-2xl font-thin">{{career.name}}</h1>
+    <div class="flex flex-wrap gap-x-6 gap-y-3">
+      <app-card-grade *ngFor="let grade of career.grades" [grade]="grade" ></app-card-grade>
+    </div>
+  </div>
+</div>

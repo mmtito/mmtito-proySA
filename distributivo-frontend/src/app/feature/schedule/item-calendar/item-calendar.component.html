@@ -1,0 +1,6 @@
+<div (click)="onClickItem()" [ngStyle]="{'backgroundColor' : event.teacher.color}" class="text-zinc-200 leading-[0.5rem] sm:leading-[0.9rem] text-[8px] sm:text-[13px] flex flex-col justify-center  h-full cursor-pointer hover:opacity-80 px-1 text-center" >
+ {{event.subject}} 
+
+<p style="margin: 0;" class="leading-[0.5rem] sm:leading-[0.9rem] text-[6px] sm:text-[10px]">{{event.teacher.name}}</p>
+</div>
+<label id="label-modal-view-event-calendar" for="modal-view-event-calendar"></label>

@@ -1,0 +1,6 @@
+<select #course (click)="addSubjectEmitter(course.value)" [ngClass]="myClass" >
+    <option selected disabled>Asignaturas</option>
+    <option [value]="course.id" *ngFor="let course of subjectList" >
+        {{course.name}}
+    </option>
+</select>

@@ -1,0 +1,19 @@
+<div class="flex flex-wrap gap-3">
+  <app-card-career
+    *ngFor="let currentCareer of listCareers"
+    [career]="currentCareer"
+    (emittierId)="setIdDelete($event)"
+  ></app-card-career>
+</div>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="accept-del-career" class="modal-toggle" />
+<div class="modal left-96 bg-opacity-0">
+  <div class="modal-box text-sm rounded-md py-1 w-52 shadow-md border-t-2 h-fit">
+    <p class="font-bold text-gray-600 text-center m-0">Estas seguro de eliminar?</p>
+    <div class="modal-action flex flex-wrap justify-center m-0 ">
+      <label (click)="delete()" for="accept-del-career" class="btn text-xs btn-xs btn-primary">Aceptar</label>
+      <label (click)="removeCurrentId()" for="accept-del-career" class="btn text-xs btn-xs btn-warning">Cancelar</label>
+    </div>
+  </div>
+</div>

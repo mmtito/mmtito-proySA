@@ -1,0 +1,39 @@
+@tokeen=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTczNTcyMjM3Mywicm9sIjoiVVNVQVJJT19FTElNSU5BUiJ9.wc5wA6FmaiurLOThFGgQrQ_G0UCNJQFCSB2PZ9oEtW-LT-syCZbI-26alSA7Z4JNJX6NkqMK55VctUXehtyzNw
+@type = application/json
+@url = http://localhost:8080/api/teacher
+###
+GET {{url}}/findAll
+Authorization:{{tokeen}}
+
+###
+POST {{url}}
+Authorization:{{tokeen}}
+Content-Type:{{type}}
+
+{
+  
+   "name" : "",
+   "type" : null,
+   "capacity" : null,
+   "location" : null
+}
+###
+PUT {{url}}
+Authorization:{{tokeen}}
+Content-Type:{{type}}
+
+{
+  
+   "name" : "",
+   "type" : null,
+   "capacity" : null,
+   "location" : null
+}
+
+###
+GET {{url}}/delete/2
+Authorization:{{tokeen}}
+
+###
+POST {{url}}/delete/2
+Authorization:{{tokeen}}

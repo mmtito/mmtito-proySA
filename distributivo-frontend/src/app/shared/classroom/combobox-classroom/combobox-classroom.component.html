@@ -1,0 +1,8 @@
+<select #classroom (change)="addclassroomEmittier(classroom.value)" class="p-2 w-full text-gray-600 outline-none border-none active:outline-none focus:outline-none" name="" id="">
+  <option value="" selected>
+    AULA
+  </option>
+  <option *ngFor="let classroom of classrooms" [value]="classroom.id"
+  [selected]="classroomId ==classroom.id"
+  >{{classroom.name}}</option>
+</select>

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  distributivo-frontend:
+    image: distributivo-frontend:local
+    command: -c /distributivo/nginx/local.nginx
+    ports:
+      - target: 80
+        published: 8020
+        protocol: tcp
+        mode: host
+    networks:
+      - distributivo_net
+
+networks:
+  distributivo_net:
+    external: true

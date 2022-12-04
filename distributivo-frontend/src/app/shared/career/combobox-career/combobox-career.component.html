@@ -1,0 +1,8 @@
+<select #careercom (change)="addCareerEmittier(careercom.value)" [ngClass]="myClass">
+  <option value="null">
+    Carrera
+  </option>
+  <option *ngFor="let career of careers" [value]="career.id"
+  [selected]="careerId ==career.name"
+  >{{career.name}}</option>
+</select>

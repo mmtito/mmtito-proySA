@@ -1,0 +1,19 @@
+.day-rounded { 
+    cursor : pointer;
+    font-size:12px; 
+    border-radius:  50%;   
+    margin: 0;  
+    width: 30px;   
+    line-height: 30px; 
+    color : rgb(127, 127, 127);         
+    text-align: center;
+    background-color:   rgb(226 232 240);
+  }
+  .day-rounded-select {
+    background-color: rgb(14, 80, 223);
+    color : white;
+  }
+  .day-rounded p { 
+    margin : 0;
+  }
+
