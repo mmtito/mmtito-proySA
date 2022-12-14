@@ -13,9 +13,6 @@ import { MaterialExampleModule } from './material.module';
   declarations: [
     AppComponent,
     LoginComponent,
-
-    
-
   ],
   imports: [
     BrowserModule,

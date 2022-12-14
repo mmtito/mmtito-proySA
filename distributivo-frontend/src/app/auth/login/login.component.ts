@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       
         }
       },
-      ()=> this.snackbar.open('Error al ingresar ❌')
+      ()=> this.snackbar.open('Usuario o Contrasena no valido  X')
     )
   }
 }

@@ -1,30 +1,63 @@
-<div class="hero min-h-screen bg-base-200">
-    <div class="hero-content flex-col lg:flex-row-reverse">
-      <div class="text-center lg:text-left">
-        <h1 class="text-5xl font-bold">Login now!</h1>
-        <p class="py-6">Sistema de gestión de aulas del Instituto Yavirac</p>
-      </div>
-      <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-        <div class="card-body">
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text">Usuario</span>
-            </label>
-            <input type="text" placeholder="usuario" class="input input-bordered" [(ngModel)]="credential.username"/>
-          </div>
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text">Password</span>
-            </label>
-            <input type="text" placeholder="password" class="input input-bordered" [(ngModel)]="credential.password" (keyup.enter)="singIn()"/>
-            <label class="label">
-              <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-            </label>
-          </div>
-          <div class="form-control mt-6">
-            <button class="btn btn-primary" (click)="singIn()">Login</button>
+<div class="hero min-h-screen" style="background-image: url(../../../assets/login/yavirac.png);">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-center text-neutral-content">
+    <div class="">
+      <div class="hero min-h-screen">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img src="https://yavirac.edu.ec/img/Logo%20Yavirac%20en%20negativo.png"
+            class="max-w-sm rounded-lg shadow-2xl" />
+          <div>
+            <div class="hero min-h-screen">
+              <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl hero-overlay bg-opacity-50 rounded-lg">
+                  <img style="width: 80px; height: 80px; border-radius: 100%; display:block; margin: auto;"
+                    src="../../../assets/login/logoYavi.jpeg"
+                    alt="">
+                  <div class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve"
+                            class="w-7 h-7 fill-orange-700 inline-block">
+                            <g>
+                              <circle cx="256" cy="128" r="128" />
+                              <path
+                                d="M256,298.667c-105.99,0.118-191.882,86.01-192,192C64,502.449,73.551,512,85.333,512h341.333   c11.782,0,21.333-9.551,21.333-21.333C447.882,384.677,361.99,298.784,256,298.667z" />
+                            </g>
+                          </svg>
+                          <input required type="text" placeholder="Usuario" class="input input-bordered border-none input-sm bg-opacity-10 text-white"
+                            [(ngModel)]="credential.username" />
+                        </span>
+                      </label>
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">
+                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                            class="w-7 h-7 fill-orange-700 inline-block" viewBox="0 0 24 24" data-name="Layer 1">
+                            <path
+                              d="m15.989 12.7v-2.7a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h2.685a1.016 1.016 0 0 0 .922-.6 4.522 4.522 0 0 0 .376-2.377 3.491 3.491 0 0 0 -3.506-3.023 4.537 4.537 0 0 0 -3.208 1.329l-7.908 7.906a7.368 7.368 0 0 0 -3.881.048 7.5 7.5 0 0 0 2.036 14.717 7.654 7.654 0 0 0 .784-.041 7.529 7.529 0 0 0 6.428-5.429 7.334 7.334 0 0 0 .047-3.88l.65-.65a1.984 1.984 0 0 0 .575-1.3zm-10.489 7.3a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1 -1.5 1.5z" />
+                          </svg>
+                          <input required="" type="password" placeholder="Contraseña"
+                            class="input input-bordered border-none input-sm bg-opacity-10 text-white" [(ngModel)]="credential.password"
+                            (keyup.enter)="singIn()" />
+                        </span>
+                      </label>
+                      <label class="label">
+                        <a href="#" class="label-text-alt link link-hover text-white text-sm">Olvidaste la contraseña?</a>
+                      </label>
+                    </div>
+                    <div class="form-control mt-4">
+                      <button class="btn btn-sm btn-ghost" (click)="singIn()"><span
+                          style="color: #8f3c08">Ingresar</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>

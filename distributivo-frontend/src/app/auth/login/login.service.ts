@@ -11,7 +11,12 @@ import { Credenciales } from './credenciales';
 export class LoginService {
 
   private url = environment.URL;
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient, 
+    private router: Router
+  ){
+    
+  }
 
   public singIn(
     credential: Credenciales

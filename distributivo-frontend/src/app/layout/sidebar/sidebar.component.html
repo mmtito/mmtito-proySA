@@ -1,21 +1,107 @@
-<ul class="menu menu-compact text-center h-full bg-slate-800 bg-opacity-95 w-56 p-2 text-white">
-  <div class="menu-title border-b-4 border-b-white text-2xl">
-    <svg class="w-6 h-6 inline" fill="white" xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24"><path d="M15.5,0h-.688a1.5,1.5,0,0,0-1.5,1.5,1.313,1.313,0,1,1-2.625,0A1.5,1.5,0,0,0,9.187,0H8.5A5.506,5.506,0,0,0,3,5.5v15A3.5,3.5,0,0,0,6.5,24H9.187a1.5,1.5,0,0,0,1.5-1.5,1.313,1.313,0,1,1,2.625,0,1.5,1.5,0,0,0,1.5,1.5H17.5A3.5,3.5,0,0,0,21,20.5V5.5A5.506,5.506,0,0,0,15.5,0Zm2,21H16.05a4.3,4.3,0,0,0-8.1,0H6.5a.5.5,0,0,1-.5-.5V16h.5A1.5,1.5,0,0,0,8,14.5H8A1.5,1.5,0,0,0,6.5,13H6V5.5A2.5,2.5,0,0,1,7.971,3.057a4.3,4.3,0,0,0,8.058,0A2.5,2.5,0,0,1,18,5.5V13h-.5A1.5,1.5,0,0,0,16,14.5h0A1.5,1.5,0,0,0,17.5,16H18v4.5A.5.5,0,0,1,17.5,21Z"/><rect x="10" y="13" width="4" height="3" rx="1.5"/></svg>
-    Gestion Aulas
+<ul class="menu menu-compact text-center h-full bg-slate-900 bg-opacity-95 w-56 p-2 text-white">
+  <div class="flex justify-between">
+    <div class="menu-title text-2xl font-serif">
+      Usuario 1
+    </div>
+    <div>
+      <label for="my-drawer-2" class="lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
+          class="w-7 h-7 fill-red-600 inline-block">
+          <path
+            d="M21,2H3C1.346,2,0,3.346,0,5V22H24V5c0-1.654-1.346-3-3-3Zm-4.543,13.043l-1.414,1.414-3.043-3.043-3.043,3.043-1.414-1.414,3.043-3.043-3.043-3.043,1.414-1.414,3.043,3.043,3.043-3.043,1.414,1.414-3.043,3.043,3.043,3.043Z" />
+        </svg>
+      </label>
+    </div>
   </div>
-  <div class="">
-    <li><a routerLink="/layout/classroom" >Aulas</a></li>
-    <li><a routerLink="location" >Ubicaciones</a></li>
-    <li><a routerLink="grade" >Cursos</a></li>
-    <li><a routerLink="schedule" >Horario <span class="text-xs" >(En desarrollo)</span></a></li>
-   <li><a routerLink="user" >Usuarios</a></li> 
-  <!--  <li><a>Tickets</a></li> -->
+  <div class="font-serif">
+    <li>
+      <a class="btn-ghost text-base hover:text-blue-600 pt-3 pb-3" routerLink="/layout/classroom">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24"
+          class="w-4 h-4 inline-block fill-white">
+          <path
+            d="M23.121,9.069,15.536,1.483a5.008,5.008,0,0,0-7.072,0L.879,9.069A2.978,2.978,0,0,0,0,11.19v9.817a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V11.19A2.978,2.978,0,0,0,23.121,9.069ZM15,22.007H9V18.073a3,3,0,0,1,6,0Zm7-1a1,1,0,0,1-1,1H17V18.073a5,5,0,0,0-10,0v3.934H3a1,1,0,0,1-1-1V11.19a1.008,1.008,0,0,1,.293-.707L9.878,2.9a3.008,3.008,0,0,1,4.244,0l7.585,7.586A1.008,1.008,0,0,1,22,11.19Z" />
+        </svg>
+        Aulas
+      </a>
+    </li>
+    <li>
+      <a class="btn-ghost text-base hover:text-blue-600 pt-3 pb-3" routerLink="location">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24"
+          class="w-4 h-4 fill-white inline-block">
+          <path d="M12,6a4,4,0,1,0,4,4A4,4,0,0,0,12,6Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,12Z" />
+          <path
+            d="M12,24a5.271,5.271,0,0,1-4.311-2.2c-3.811-5.257-5.744-9.209-5.744-11.747a10.055,10.055,0,0,1,20.11,0c0,2.538-1.933,6.49-5.744,11.747A5.271,5.271,0,0,1,12,24ZM12,2.181a7.883,7.883,0,0,0-7.874,7.874c0,2.01,1.893,5.727,5.329,10.466a3.145,3.145,0,0,0,5.09,0c3.436-4.739,5.329-8.456,5.329-10.466A7.883,7.883,0,0,0,12,2.181Z" />
+        </svg>
+        Ubicaciones
+      </a>
+    </li>
+    <li>
+      <a class="btn-ghost text-base hover:text-blue-600 pt-3 pb-3" routerLink="grade">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
+          class="w-4 h-4 fill-white inline-block">
+          <path
+            d="M16.797,1.675c-.462-1.298-1.893-1.978-3.193-1.518l-.941,.335c-.629,.224-1.134,.679-1.42,1.281-.149,.312-.229,.645-.242,.979v-.253c0-1.379-1.122-2.5-2.5-2.5H2.5C1.122,0,0,1.121,0,2.5V24H11V2.95c.01,.246,.057,.492,.142,.73l7.005,20.342,5.846-1.998L16.797,1.675Zm-6.797,.825v2.5H6V1h2.5c.827,0,1.5,.673,1.5,1.5Zm-4,3.5h4v12H6V6Zm-1,12H1V6H5v12ZM2.5,1h2.5V5H1V2.5c0-.827,.673-1.5,1.5-1.5ZM1,19H5v4H1v-4Zm5,4v-4h4v4H6Zm15.119-6.105l-3.891,1.383-3.943-11.45,3.797-1.349,4.037,11.416ZM12.145,2.203c.172-.361,.475-.635,.853-.77l.941-.334c.166-.06,.335-.087,.501-.087,.617,0,1.197,.384,1.415,.997l.894,2.528-3.79,1.346-.873-2.534c-.134-.377-.113-.784,.059-1.146Zm5.409,17.02l3.899-1.386,1.262,3.568-3.945,1.348-1.216-3.529Z" />
+        </svg>
+        Cursos
+      </a>
+    </li>
+    <li>
+      <a class="btn-ghost text-base hover:text-blue-600 pt-3 pb-3" routerLink="schedule">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-white inline-block">
+          <g id="_01_align_center" data-name="01 align center">
+            <path
+              d="M21,2H18V0H16V2H8V0H6V2H3A3,3,0,0,0,0,5V24H24V5A3,3,0,0,0,21,2ZM2,5A1,1,0,0,1,3,4H21a1,1,0,0,1,1,1V8H2ZM2,22V10H22V22Z" />
+            <rect x="15" y="13" width="2" height="2" />
+            <rect x="11" y="13" width="2" height="2" />
+            <rect x="7" y="13" width="2" height="2" />
+            <rect x="15" y="17" width="2" height="2" />
+            <rect x="11" y="17" width="2" height="2" />
+            <rect x="7" y="17" width="2" height="2" />
+          </g>
+        </svg>
+        Horario
+      </a>
+    </li>
+    <li>
+      <a class="btn-ghost text-base hover:text-blue-600 pt-3 pb-3" routerLink="user">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24"
+          class="w-4 h-4 fill-white inline-block">
+          <path
+            d="M19,0H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,19,0ZM7,22V21a5,5,0,0,1,10,0v1Zm15-3a3,3,0,0,1-3,3V21A7,7,0,0,0,5,21v1a3,3,0,0,1-3-3V5A3,3,0,0,1,5,2H19a3,3,0,0,1,3,3Z" />
+          <path d="M12,4a4,4,0,1,0,4,4A4,4,0,0,0,12,4Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,10Z" />
+        </svg>
+        Usuarios
+      </a>
+    </li>
+    <li>
+      <a class="btn-ghost text-base hover:text-blue-600 pt-3 pb-3" routerLink="teacher-list">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
+          class="w-4 h-4 fill-white inline-block">
+          <path
+            d="M12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,12,10Zm6,13A6,6,0,0,0,6,23a1,1,0,0,0,2,0,4,4,0,0,1,8,0,1,1,0,0,0,2,0ZM18,8a4,4,0,1,1,4-4A4,4,0,0,1,18,8Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,18,2Zm6,13a6.006,6.006,0,0,0-6-6,1,1,0,0,0,0,2,4,4,0,0,1,4,4,1,1,0,0,0,2,0ZM6,8a4,4,0,1,1,4-4A4,4,0,0,1,6,8ZM6,2A2,2,0,1,0,8,4,2,2,0,0,0,6,2ZM2,15a4,4,0,0,1,4-4A1,1,0,0,0,6,9a6.006,6.006,0,0,0-6,6,1,1,0,0,0,2,0Z" />
+        </svg>
+        Docente
+      </a>
+    </li>
+    <li>
+      <a class="btn-ghost text-base hover:text-blue-600 pt-3 pb-3" routerLink="career">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
+          class="h-4 w-4 fill-white inline-block">
+          <path
+            d="M18.5,0H5.5A5.506,5.506,0,0,0,0,5.5v13A5.506,5.506,0,0,0,5.5,24h13A5.506,5.506,0,0,0,24,18.5V5.5A5.506,5.506,0,0,0,18.5,0ZM3,18.5V12h9V3h6.5A2.5,2.5,0,0,1,21,5.5V12H12v9H5.5A2.5,2.5,0,0,1,3,18.5Z" />
+        </svg>
+        Carreras
+      </a>
+    </li>
+    <li>
+      <a class="btn-ghost text-base hover:text-blue-600 pt-3 pb-3" routerLink="distributivo-docente">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 24 24" class="w-4 h-4 fill-white inline-block"
+          data-name="Layer 1">
+          <path
+            d="m18 9.064a3.049 3.049 0 0 0 -.9-2.164 3.139 3.139 0 0 0 -4.334 0l-11.866 11.869a3.064 3.064 0 0 0 4.33 4.331l11.87-11.869a3.047 3.047 0 0 0 .9-2.167zm-14.184 12.624a1.087 1.087 0 0 1 -1.5 0 1.062 1.062 0 0 1 0-1.5l7.769-7.77 1.505 1.505zm11.872-11.872-2.688 2.689-1.5-1.505 2.689-2.688a1.063 1.063 0 1 1 1.5 1.5zm-10.825-6.961 1.55-.442.442-1.55a1.191 1.191 0 0 1 2.29 0l.442 1.55 1.55.442a1.191 1.191 0 0 1 0 2.29l-1.55.442-.442 1.55a1.191 1.191 0 0 1 -2.29 0l-.442-1.55-1.55-.442a1.191 1.191 0 0 1 0-2.29zm18.274 14.29-1.55.442-.442 1.55a1.191 1.191 0 0 1 -2.29 0l-.442-1.55-1.55-.442a1.191 1.191 0 0 1 0-2.29l1.55-.442.442-1.55a1.191 1.191 0 0 1 2.29 0l.442 1.55 1.55.442a1.191 1.191 0 0 1 0 2.29zm-5.382-14.645 1.356-.387.389-1.358a1.042 1.042 0 0 1 2 0l.387 1.356 1.356.387a1.042 1.042 0 0 1 0 2l-1.356.387-.387 1.359a1.042 1.042 0 0 1 -2 0l-.387-1.355-1.358-.389a1.042 1.042 0 0 1 0-2z" />
+        </svg>
+        Distributivo
+      </a>
+    </li>
   </div>
-
-  <!-- <li class="menu-title">
-    Asistencia
-  </li>-->
-  <li><a routerLink="teacher-list" >Docente</a></li>
-  <li><a routerLink="career">Carreras</a></li>
-  <li><a routerLink="distributivo-docente">Distributivo Docente</a><span class="text-xs" >(En desarrollo)</span></li>
 </ul>

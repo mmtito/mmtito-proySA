@@ -1,47 +1,53 @@
 <div class="navbar border-b-4">
   <div class="flex-none ">
-    <label for="my-drawer-2" class="btn btn-square btn-ghost md:hidden ">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    <label for="my-drawer-2" class="btn btn-square btn-ghost lg:hidden ">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        class="inline-block w-5 h-5 stroke-current">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
     </label>
   </div>
-    <div class="flex-1">
-      <img class="w-15 h-10" src="" alt="">
-      <a routerLink="dashboard" class="btn btn-ghost normal-case text-xl">Sistema Yavirac</a>
-    </div>
-    <div class="flex-none">
-      <div class="dropdown dropdown-end">
-        <label tabindex="0" class="btn btn-ghost btn-circle">
-          <div class="indicator">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-            <span class="badge badge-sm indicator-item">8</span>
-          </div>
-        </label>
-        <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
-          <div class="card-body">
-            <span class="font-bold text-lg">8 Items</span>
-            <span class="text-info">Subtotal: $999</span>
-            <div class="card-actions">
-              <button class="btn btn-primary btn-block">View cart</button>
-            </div>
-          </div>
+  <div class="flex-1">
+    <img class="w-15 h-10" src="" alt="">
+    <a routerLink="dashboard" class="btn btn-ghost normal-case text-xl font-serif text-orange-900">SystemYavi</a>
+  </div>
+  <div class="flex-none">
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost btn-circle">
+        <div class="indicator">
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 24 24" class="w-5 h-5 fill-orange-900"
+            data-name="Layer 1">
+            <path
+              d="m1.037 5.889-1.043-1.7 6.735-4.127 1.042 1.706zm21.237 10.328-4.125 6.683 1.7 1.051 4.125-6.684zm-1.35-1.617-4.924 7.983a2.879 2.879 0 0 1 -2.13 1.394 3.158 3.158 0 0 1 -.38.023 2.887 2.887 0 0 1 -2.052-.854l-.963-.963a4.75 4.75 0 0 1 -6.614-6.617l-3.008-3.009a2.911 2.911 0 0 1 .452-4.486l7.762-4.75a8.362 8.362 0 0 1 9.709.489l1.892-1.892 1.414 1.414-1.9 1.9a8.449 8.449 0 0 1 .742 9.368zm-11.914 6.118-3.692-3.695a2.719 2.719 0 0 0 .491 3.211 2.825 2.825 0 0 0 3.201.484zm9.12-14.818a6.4 6.4 0 0 0 -8-.878l-7.752 4.736a.88.88 0 0 0 -.373.649.9.9 0 0 0 .262.736l10.586 10.589a.886.886 0 0 0 .759.26.9.9 0 0 0 .67-.441l4.92-7.973a6.445 6.445 0 0 0 -1.072-7.678z" />
+          </svg><span class="badge badge-xs badge-error indicator-item"></span>
+        </div>
+      </label>
+      <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
+        <div class="card-body">
+          <span class="font-bold text-lg">Notificaciones</span>
+          <span class="text-info">Opcion1</span>
+          <span class="text-info">Opcion2</span>
+          <span class="text-info">Opcion3</span>
         </div>
       </div>
-      <div class="dropdown dropdown-end">
-        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-          <div class="w-10 rounded-full">
-            <img src="https://placeimg.com/80/80/people" />
-          </div>
-        </label>
-        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-          <li>
-            <a class="justify-between">
-              Profile
-              <span class="badge">New</span>
-            </a>
-          </li>
-          <li><a>Settings</a></li>
-          <li><a (click)="logout()" >Logout</a></li>
-        </ul>
-      </div>
+    </div>
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img
+            src="data:image/png;base64,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" />
+        </div>
+      </label>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        <li>
+          <a class="justify-between">
+            Perfil
+            <span class="badge badge-xs badge-info"></span>
+          </a>
+        </li>
+        <li><a>Configuraciones</a></li>
+        <li><a (click)="logout()">Salir</a></li>
+      </ul>
     </div>
   </div>
+</div>
